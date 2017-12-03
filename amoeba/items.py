@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 
-# Define here the models for your scraped items
-#
-# See documentation in:
-# http://doc.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
 
-class AmoebaItem(scrapy.Item):
+# 51job职位条目
+class Job51PositionItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    # 职位名
+   	positionName=scrapy.Field()
+   	comName=scrapy.Field()
+   	workAddress=scrapy.Field()
+   	emolument=scrapy.Field()
+   	publishdate=scrapy.Field()
+
+

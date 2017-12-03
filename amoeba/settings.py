@@ -1,22 +1,22 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for amoeba project
-#
-# For simplicity, this file contains only settings considered important or
-# commonly used. You can find more settings consulting the documentation:
-#
-#     http://doc.scrapy.org/en/latest/topics/settings.html
-#     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-
+# The scrapy base configuration.
+# ~ The project name
 BOT_NAME = 'amoeba'
-
+# ~ The spider modules directory.
 SPIDER_MODULES = ['amoeba.spiders']
+# ~ The new spider module directory.
 NEWSPIDER_MODULE = 'amoeba.spiders'
+
+# The pymongo database configuration.
+# MONGODB_SERVER = "localhost"
+#MONGODB_PORT = 27017
+#MONGODB_DB = "dbmeizi"
+#MONGODB_COLLECTION = "meizi"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'amoeba (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'amoeba.pipelines.AmoebaPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'amoeba.pipelines.AmoebaPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
